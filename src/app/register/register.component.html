@@ -1,0 +1,42 @@
+<h1>Register </h1>
+<div class="row mt-5">
+    <div class="col-4">
+        <img class="img-fluid" src="https://cdn.dribbble.com/users/291221/screenshots/1425333/helper.gif" width="1000"
+            height="1000">
+    </div>
+    <div class="col-8">
+        <div class="col-5 mt-5">
+            <form (ngSubmit)="register()" [formGroup]="registerForm" class="border p-5 mt-5 me-5">
+                <div class="form-floating mb-3">
+                    <input name="uname" formControlName="uname" type="text" class="form-control" id="floatingInput"
+                        placeholder="Username">
+                    <label for="floatingInput">Username</label>
+                </div>
+                <div *ngIf="this.registerForm.get('acno')?.errors&&this.registerForm.get('acno')?.touched"
+                    class="text-danger mb-2">Invalid Username</div>
+
+                <div class="form-floating mb-3">
+                    <input name="acno" formControlName="acno" type="text" class="form-control" id="floatingInput"
+                        placeholder="name@example.com">
+                    <label for="floatingInput">Account Number</label>
+                </div>
+                <div *ngIf="this.registerForm.get('acno')?.errors&&this.registerForm.get('acno')?.touched"
+                    class="text-danger mb-2">Invalid Account Number</div>
+                <div class="form-floating">
+                    <input name="pswd" formControlName="pswd" type="password" class="form-control" id="floatingPassword"
+                        placeholder="Password">
+
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div *ngIf="this.registerForm.get('pswd')?.errors&&this.registerForm.get('pswd')?.touched"
+                    class="text-danger mb-2">Invalid Password</div>
+                <br>
+                <div style="text-align:center;" class="mt-2 ">
+                    <button type="submit" class="btn btn-outline-secondary">Register</button>
+                    &nbsp;
+                    <br>
+                    <span>Already Have Account?<a routerLink="/">Login</a></span>
+                </div>
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,62 @@
+.wrapper.one {
+    background-color: #ffffff;
+}
+.drop-main {
+    display: flex;
+    font-size: 7rem;
+    margin: 1.5rem;
+    justify-content: center;
+    font-family: "Russo One", sans-serif;
+}
+.d {
+    opacity: 0;
+    animation: drop 0.4s linear forwards;
+    color: #000000;
+}
+.r {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.2s;
+    color: #000000;
+}
+.o {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.4s;
+    color: #000000;
+}
+.p {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.6s;
+    color: #000000;
+}
+.s {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.8s;
+    color: #000000;
+}
+@keyframes drop {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    65% {
+        transform: translateY(-17px);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(-22px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+body {
+    text-align: center;
+ }

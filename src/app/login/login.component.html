@@ -1,0 +1,39 @@
+
+<app-header></app-header>
+<div class="row mt-5">
+    <div class="col-7 mt-2">
+        <img class="m-4" height="500px"
+            src="https://cdn.dribbble.com/users/846207/screenshots/9192312/office-desk-animation.gif">
+    </div>
+    <div class="col-5 mt-5">
+        <form (ngSubmit)="login()" [formGroup]="loginForm" class="border p-5 mt-5 me-5">
+            <div class="form-floating mb-3">
+                <input name="acno" formControlName="acno" type="text" class="form-control" id="floatingInput"
+                    placeholder="name@example.com">
+                <label for="floatingInput">Account Number</label>
+            </div>
+            <div *ngIf="this.loginForm.get('acno')?.errors&&this.loginForm.get('acno')?.touched" class="text-danger mb-2">Invalid Account Number</div>
+            <div class="form-floating">
+                <input name="pswd" formControlName="pswd" type="password" class="form-control" id="floatingPassword"
+                    placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div *ngIf="this.loginForm.get('pswd')?.errors&&this.loginForm.get('pswd')?.touched" class="text-danger mb-2">Incorrect Password</div>
+            <br>
+            <div class="text-danger" >{{errorMsg}}</div>
+            <div style="text-align:center;" class="mt-2 ">
+                <button type="submit" class="btn btn-outline-secondary">Login
+                    <span *ngIf="successMsg" class="spinner-border text-warning" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </span>
+                </button>
+                &nbsp;
+                <br>
+                &nbsp;
+                <br>
+                <span >New user?<a routerLink="/register">Register</a></span>
+            </div>
+        </form>
+    </div>
+</div>
+
