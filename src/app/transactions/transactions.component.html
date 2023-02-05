@@ -12,7 +12,7 @@
 
             <body class="text-center">
                 <div class="wrapper one text-center">
-                    <h2 class="text-center drop-main ">
+                    <h2 class="text-center drop-main text-center ">
                         <div class="d">M</div>
                         <div class="r">I</div>
                         <div class="o">N</div>
@@ -46,20 +46,21 @@
 <div class="container border p-3 mt-5">
     <div class="row ">
         <div class="col-lg-4">
-            <h4 class="text-success">Transaction History</h4>
+            <h4 class="text-success ">Transaction History</h4>
         </div>
         <div class="col-lg-4">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label for="search">search by:</label>&nbsp;
+            <label for="search font-monospace">search by:</label>&nbsp;
             <input (keyup)="search($event)" class="text-center" id="search" type="text" placeholder="Transaction Type">
         </div>
         <div class="col-lg-4">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input (click)="generatePdf()" value="Export" type="button" class="btn btn-success">
+<button class="button">            <input (click)="generatePdf()" value="Export" type="button" class="btn btn-success">
+</button>
         </div>
     </div>
     <table class="table border mt-3 text-center">
-        <thead class="text-danger">
+        <thead class="text-danger font-monospace">
             <tr>
                 <th>No.</th>
                 <th>Transaction Type</th>

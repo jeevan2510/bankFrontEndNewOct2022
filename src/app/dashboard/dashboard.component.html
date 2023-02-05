@@ -1,4 +1,6 @@
-<nav class="navbar sticky-top bg-body-tertiary">
+
+
+<nav class="navbar sticky-top bg-body-tertiary background-color:Tomato;">
     <div class="container-fluid">
 
         <nav *ngIf="!deleteConfirm" class="navbar navbar-expand-lg bg-body-tertiary">
@@ -10,38 +12,40 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle " data-bs-toggle="offcanvas" href="#offcanvasDeposit"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Services
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" data-bs-toggle="offcanvas"
-                                        href="#offcanvasDeposit">Deposit(own account)</a></li>
-                                <li><a class="dropdown-item btn" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">Fund Transfer</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle font-monospace" data-bs-toggle="offcanvas" href="#offcanvasDeposit"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item font-monospace" data-bs-toggle="offcanvas"
+                                    href="#offcanvasDeposit ">Deposit(own account)</a></li>
+                            <li><a class="dropdown-item btn font-monospace" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Fund Transfer</a></li>
 
-                                <li><a class="dropdown-item" (click)="getBalance()" data-bs-toggle="offcanvas"
-                                        href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Balance
-                                        Enquiery</a></li>
-                                <li><a class="dropdown-item" routerLink="/transactions">Mini Statment</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item btn" (click)="deleteAccountFromNavBar()"><i
-                                            class="fa fa-solid fa-trash"></i>Delete Account</a>
-                                </li>
-                                <li><a class="dropdown-item btn" (click)="logout()"><i
-                                            class="fa-solid fa-right-from-bracket"></i>Log Out</a></li>
-                            </ul>
-                        </li>
+                            <li><a class="dropdown-item font-monospace" (click)="getBalance()" data-bs-toggle="offcanvas"
+                                    href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Balance
+                                    Enquiery</a></li>
+                            <li><a class="dropdown-item font-monospace" routerLink="/transactions">Mini Statment</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item btn font-monospace" (click)="deleteAccountFromNavBar()"><i
+                                        class="fa fa-solid fa-trash"></i>Delete Account</a>
+                            </li>
+                            <li><a class="dropdown-item btn font-monospace" (click)="logout()"><i
+                                        class="fa-solid fa-right-from-bracket "></i>Log Out</a></li>
+                        </ul>
+                    </li>
 
-                    </ul>
+                </ul>
 
-                </div>
+            </div>
+        </a>
             </div>
         </nav>
     </div>
@@ -79,6 +83,12 @@
                 </g>
             </svg>
             <h1>BANK</h1>
+            <div class='scrolldown' style="--color: white">
+                <div class="chevrons">
+                  <div class='chevrondown'></div>
+                  <div class='chevrondown'></div>
+                </div>
+              </div>
         </div>
     </div>
 
@@ -115,8 +125,8 @@
         </div>
         <div *ngIf="!logoutDiv" class="col-md-5 fw-bold">
             <div *ngIf="!deleteConfirm" class="row">
-                <p class="fs-1 fw-bold text-center ">Welcome {{user}}</p>
-                <p class="text-danger fw-bold"> The major functions of banks are almost the same but the set of people
+                <p class="fs-1 fw-bold text-center fw-bolder font-monospace font-monospace">Welcome {{user}}</p>
+                <p class="text-danger fw-bold fw-bolder font-monospace"> The major functions of banks are almost the same but the set of people
                     each
                     sector or type deals with
                     may differ. Given below the functions of our banks in India:</p>
@@ -131,12 +141,12 @@
 
             <div *ngIf="!deleteConfirm" class="collapse" id="collapseExample">
                 <div class="card card-body  fw-light ">
-                    <ol class="list-group list-group-flush text-center fw-light">
-                        <li class="list-group-item  ">Acceptance of deposits from the public.</li>
-                        <li class="list-group-item">Provide demand withdrawal facility</li>
-                        <li class="list-group-item">Transfer of funds</li>
-                        <li class="list-group-item">Provide customers with locker facilities</li>
-                        <li class="list-group-item">Dealing with foreign exchange</li>
+                    <ol class="list-group list-group-flush text-center fw-light font-monospace">
+                        <li class="list-group-item-success  list-group-item list-group-item-action  ">Acceptance of deposits from the public.</li>
+                        <li class="list-group-item-success list-group-item list-group-item-action">Provide demand withdrawal facility</li>
+                        <li class="list-group-item-success list-group-item list-group-item-action">Transfer of funds</li>
+                        <li class="list-group-item-success list-group-item list-group-item-action">Provide customers with locker facilities</li>
+                        <li class="list-group-item-success list-group-item list-group-item-action">Dealing with foreign exchange</li>
                     </ol>
 
                 </div>
@@ -153,13 +163,13 @@
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Balance enquirey</h5>
+        <h5 class="offcanvas-title font-monospace" id="offcanvasExampleLabel">Balance enquirey</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <div style="margin-top:100px;">
-            <h5 class="text-primary">Dear {{user}}</h5>
-            <label for="">
+            <h5 class="text-warning font-monospace">Dear {{user}}</h5>
+            <label class="font-monospace" for="">
                 youre current account no. {{currentAcno}} balance is <b>₹{{balance}}</b></label>
             <img src="https://cdn.dribbble.com/users/2609339/screenshots/9554946/media/d57bfc10b044276bd20429a9a7be1a6b.gif"
                 style="width:350px;height:300px;">
@@ -173,22 +183,22 @@
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDeposit" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel"> Deposit form</h5>
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel font-monospace"> Deposit form</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <div style="margin-top:60px;">
 
-            <h5>Dear {{user}} you can enter the ammount to depiosite</h5>
+            <h5 class="font-monospace">Dear {{user}} you can enter the ammount to depiosite</h5>
             <!--(ngSubmit)="deposit()"-->
             <form (ngSubmit)="deposit()" [formGroup]=" depositForm" class="mt-2  p-2">
                 <div><input name="amount" formControlName="amount" type="text" class="form-control"
                         placeholder="Enter Ammount">
                 </div>
                 <div *ngIf="this.depositForm.get('amount')?.errors&&this.depositForm.get('amount')?.touched"
-                    class="text-danger mb-2">Invalid Amount</div>
+                    class="text-danger mb-2 font-monospace">Invalid Amount</div>
                 <div class="text-danger">{{depositMsg}}</div>
-                <button (click)="showconfetti($event.target)" class="btn btn-primary mt-2">Deposit</button><br>
+                <button (click)="showconfetti($event.target)" class="btn btn-success mt-2 text-center font-monospace">Deposit</button><br>
                 <img src="https://cdn.dribbble.com/users/7218414/screenshots/15271909/media/0a3ba5cb6ebfe3d8bd416966f5e91205.gif"
                     style="width:350px;height:300px;">
             </form>
@@ -204,44 +214,44 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="fs-5 text-center fs-1 fw-bold text-uppercase  " id="staticBackdropLabel">Fund Transfer</h1>
+                <h1 class="fs-5 text-center fs-1 fw-bold text-uppercase  font-monospace" id="staticBackdropLabel">Fund Transfer</h1>
                 <button type="button" (click)="clearFundTransferForm()" class="btn-close" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form [formGroup]="FundTransferForm">
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-3 font-monospace">
                         <input name="toAcno" formControlName="toAcno" type="text" class="form-control"
                             id="floatingInput" placeholder="Credit Account Number">
-                        <label for="floatingInput">Credit Account Number</label>
+                        <label class="font-monospace" for="floatingInput">Credit Account Number</label>
                     </div>
                     <div *ngIf="this.FundTransferForm.get('toAcno')?.errors&&this.FundTransferForm.get('toAcno')?.touched"
                         class="text-danger mb-2">Invalid Account Number</div>
                     <div class="form-floating">
                         <input name="pswd" formControlName="pswd" type="password" class="form-control"
                             id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword"> ProfilePassword</label>
+                        <label class="font-monospace" for="floatingPassword"> ProfilePassword</label>
                     </div>
                     <div *ngIf="this.FundTransferForm.get('pswd')?.errors&&this.FundTransferForm.get('pswd')?.touched"
-                        class="text-danger mb-2">Incorrect Password</div>
+                        class="text-danger mb-2 font-monospace">Incorrect Password</div>
                     <br>
                     <div class="form-floating">
                         <input name="pswd" formControlName="amount" type="text" class="form-control"
                             id="floatingPassword" placeholder="amount">
-                        <label for="floatingPassword">Amount</label>
+                        <label class="font-monospace" for="floatingPassword">Amount</label>
                     </div>
                     <div *ngIf="this.FundTransferForm.get('pswd')?.errors&&this.FundTransferForm.get('pswd')?.touched"
-                        class="text-danger mb-2">Incorrect Amount</div>
+                        class="text-danger mb-2 font-monospace">Incorrect Amount</div>
                     <!--<div class="text-danger">{{errorMsg}}</div>-->
                     <div class="text-success">{{fundTransferSuccessMsg}}</div>
                     <div class="text-danger">{{fundTransferErrorMsg}}</div>
                     <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6df8570f-45ae-4686-b024-30411795da26_626x432.gif"
                         width="400">
-                    <div class="modal-footer ">
+                    <div class=" modal-footer ">
                         <button type="button" (click)="clearFundTransferForm()" class="btn btn-secondary"
                             data-bs-dismiss="modal">Close</button>
                         <button type="button" (click)="transfer()" (click)="showconfetti($event.target)"
-                            class="btn btn-primary">Transfer</button>
+                            class="btn btn-primary font-monospace">Transfer</button>
                     </div>
 
                 </form>
@@ -252,3 +262,21 @@
 
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
