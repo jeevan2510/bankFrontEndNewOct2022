@@ -1,23 +1,23 @@
 
 
-<nav class="navbar sticky-top bg-body-tertiary background-color:Tomato;">
+<nav class="navbar btn btn-danger navbar-dark bg-dark sticky-top bg-body-tertiary background-color:Tomato;">
     <div class="container-fluid">
 
         <nav *ngIf="!deleteConfirm" class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <img src="https://img1.picmix.com/output/stamp/thumb/0/1/1/6/1456110_56f42.gif"
                     style="width:50px;height:60px;">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler btn btn-danger" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
         <a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse background-color:Tomato; --bs-tertiary-bg" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 --bs-tertiary-bg">
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle font-monospace" data-bs-toggle="offcanvas" href="#offcanvasDeposit"
+                    <li class="nav-item dropdown background-color:Tomato; --bs-tertiary-bg">
+                        <a class="nav-link dropdown-toggle font-monospace --bs-tertiary-bg" data-bs-toggle="offcanvas" href="#offcanvasDeposit"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
@@ -163,7 +163,7 @@
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title font-monospace" id="offcanvasExampleLabel">Balance enquirey</h5>
+        <h5 class="offcanvas-title " id="offcanvasExampleLabel">Balance enquirey</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -182,8 +182,8 @@
 
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDeposit" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel font-monospace"> Deposit form</h5>
+    <div class="offcanvas-header ">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel "> Deposit form</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -214,7 +214,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="fs-5 text-center fs-1 fw-bold text-uppercase  font-monospace" id="staticBackdropLabel">Fund Transfer</h1>
+                <h1 class="fs-5 text-center fs-1 fw-bold text-uppercase  " id="staticBackdropLabel">Fund Transfer</h1>
                 <button type="button" (click)="clearFundTransferForm()" class="btn-close" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
@@ -226,7 +226,7 @@
                         <label class="font-monospace" for="floatingInput">Credit Account Number</label>
                     </div>
                     <div *ngIf="this.FundTransferForm.get('toAcno')?.errors&&this.FundTransferForm.get('toAcno')?.touched"
-                        class="text-danger mb-2">Invalid Account Number</div>
+                        class="text-danger mb-2 ">Invalid Account Number</div>
                     <div class="form-floating">
                         <input name="pswd" formControlName="pswd" type="password" class="form-control"
                             id="floatingPassword" placeholder="Password">
@@ -248,7 +248,7 @@
                     <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6df8570f-45ae-4686-b024-30411795da26_626x432.gif"
                         width="400">
                     <div class=" modal-footer ">
-                        <button type="button" (click)="clearFundTransferForm()" class="btn btn-secondary"
+                        <button type="button" (click)="clearFundTransferForm()" class="btn btn-secondary font-monospace"
                             data-bs-dismiss="modal">Close</button>
                         <button type="button" (click)="transfer()" (click)="showconfetti($event.target)"
                             class="btn btn-primary font-monospace">Transfer</button>
@@ -276,7 +276,9 @@
 
 
 
-
-
-
-
+<article>
+ 
+    <footer>
+        <p class="text-center fs-1 fw-bolder font-monospace text-dark-emphasis">BANK © 2023</p>
+    </footer>
+</article>
